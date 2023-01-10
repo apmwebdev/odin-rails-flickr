@@ -1,0 +1,15 @@
+<h1>Find Photos By User</h1>
+
+<%= form_with url: search_path, method: :get do |f| %>
+  <%= f.label :flickr_id, "Flickr User ID:" %>
+  <% if params.has_key?("flickr_id") %>
+    <%= f.search_field :flickr_id, value: params[:flickr_id] %>
+  <% else %>
+    <%= f.search_field :flickr_id, value: Rails.configuration.flickr_id %>
+  <% end %>
+  <%= f.submit "Submit", name: nil %>
+<% end %>
+
+<% if @results %>
+  <%= render "search_results", results: @results %>
+<% end %>

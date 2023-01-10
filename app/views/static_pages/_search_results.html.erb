@@ -1,0 +1,11 @@
+<div class="gallery">
+  <%#= results %>
+  <% results.each do |result| %>
+    <div class="tile">
+      <%#= result %>
+      <%= result[:title] %>
+      <%#= result.url %>
+      <%= image_tag(result[:url]) %>
+    </div>
+  <% end %>
+</div>
