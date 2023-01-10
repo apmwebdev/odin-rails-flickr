@@ -11,6 +11,7 @@ module RailsFlickr
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Access with Rails.configuration.flickr_id
     config.flickr_id = "197387511@N07"
 
     # Configuration for the application, engines, and railties goes here.
